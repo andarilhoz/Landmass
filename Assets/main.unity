@@ -301,6 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e1788843f06da4c8a491cf1cb321fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawMode: 1
   mapWidth: 100
   mapHeight: 100
   noiseScale: 31.53
@@ -308,7 +309,7 @@ MonoBehaviour:
   persistance: 0.328
   lacunarity: 1.87
   seed: -13
-  offset: {x: 9.82, y: -7.25}
+  offset: {x: -5.41, y: -7.25}
   autoUpdate: 1
   regions:
   - name: water
