@@ -9,7 +9,8 @@ public class MapGenerator : MonoBehaviour
     public enum DrawMode
     {
         NoiseMap,
-        ColourMap
+        ColourMap,
+        DrawMesh,
     }
 
     public DrawMode drawMode;
@@ -58,6 +59,9 @@ public class MapGenerator : MonoBehaviour
                 break;
             case DrawMode.ColourMap:
                 display.DrawTexture(TextureGenerator.TextureFromColourMap(colourMap, mapWidth, mapHeight));
+                break;
+            case DrawMode.DrawMesh:
+                display.DrawMesh(MeshGenerator.GenerateTerrainMesh(noiseMap), TextureGenerator.TextureFromColourMap(colourMap, mapWidth, mapHeight));
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
